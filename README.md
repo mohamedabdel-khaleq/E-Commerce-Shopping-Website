@@ -64,12 +64,6 @@ No server or installation is required.
 
 ---
 
-## 🌐 Live Demo
-
-https://mesterperfect.github.io/ecommerce
-
----
-
 ## ✨ Features
 
 - User Login & Registration
@@ -145,8 +139,3 @@ Contributions are welcome.
 4. Push your branch.
 5. Submit a Pull Request.
 
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
