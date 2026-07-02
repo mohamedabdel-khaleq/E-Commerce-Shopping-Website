@@ -44,22 +44,8 @@ ecommerce-project/
 │   └── PERFORMANCE.md
 └── index.html
 ```
-
----
-
-## 🚀 Getting Started
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/mesterPerfect/ecommerce.git
-cd ecommerce
-```
-
 ### Run the Project
-
 Simply open **index.html** in your browser.
-
 No server or installation is required.
 
 ---
