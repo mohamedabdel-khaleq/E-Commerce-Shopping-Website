@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link rel="stylesheet" href="products.css">
+</head>
+<body>
+  <h2>Product Page</h2>
+
+  <!-- search bar -->
+  <input type="text" id="searchInput" placeholder="Search products...">
+
+  <!-- filter section -->
+  <div id="filterSection">
+    <h3>Filter by:</h3>
+
+    <label for="categoryFilter">Category:</label>
+    <select id="categoryFilter">
+      <option value="all">All</option>
+      <option value="electronics">Electronics</option>
+      <option value="jewelery">Jewelery</option>
+      <option value="men's clothing">Men's Clothing</option>
+      <option value="women's clothing">Women's Clothing</option>
+    </select>
+
+    <label for="priceFilter">Price Range:</label>
+    <select id="priceFilter">
+      <option value="all">All</option>
+      <option value="0-50">$0 - $50</option>
+      <option value="51-100">$51 - $100</option>
+      <option value="101-200">$101 - $200</option>
+    </select>
+
+    <label for="sortSelect">Sort by Price:</label>
+    <select id="sortSelect">
+      <option value="default">Default</option>
+      <option value="low-to-high">Low to High</option>
+      <option value="high-to-low">High to Low</option>
+    </select>
+  </div>
+
+  <!-- container -->
+  <div id="productContainer"></div>
+
+  <script src="products.js"></script>
+</body>
+</html>

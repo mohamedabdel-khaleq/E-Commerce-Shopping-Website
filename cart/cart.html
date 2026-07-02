@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping Cart - My Store</title>
+  <link rel="stylesheet" href="./cart.css">
+  <link rel="stylesheet" href="../assets/css/global.css">
+</head>
+<body>
+ 
+  <header>
+    <h1>🛍️ My Store</h1>
+    <nav>
+      <a href="../index.html" id="home-link">Home</a>
+      <a href="../auth/login.html" id="login-link">Login</a>
+      <a href="../auth/signup.html" id="signup-link">Signup</a>
+      <a href="../products/products.html">Products</a>
+      <a href="../cart/cart.html">Cart</a>
+      <a href="../orders/orders.html" id="orders-link" style="display: none;">Orders</a>
+      <a href="../admin/admin.html" id="admin-link" style="display: none;">Admin</a>
+      <span id="welcome-msg" style="display: none; margin-left: 10px;"></span>
+      <button id="logout-btn" style="display: none;">Logout</button>
+    </nav>
+    <!-- Theme toggle button -->
+    <button id="themeToggle">🌙</button>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <h2>Shopping Cart</h2>
+
+    <section id="cartContainer">
+      <table id="cartTable">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody id="cartItems">
+          <!-- Cart items will be injected here by cart.js -->
+        </tbody>
+      </table>
+
+      <div id="cartSummary">
+        <p><strong>Total:</strong> $<span id="cartTotal">0.00</span></p>
+        <button id="clearCart">Clear Cart</button>
+        <button id="checkout">Checkout</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 My Store. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Us</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+   <script src="../assets/js/utils.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="./cart.js"></script>
+</body>
+</html>

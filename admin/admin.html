@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="../assets/css/global.css">
+</head>
+<body>
+  <header>
+    <h1>Admin Dashboard</h1>
+    <nav>
+      <a href="../index.html" id="home-link">Home</a>
+      <a href="../auth/login.html" id="login-link">Login</a>
+      <a href="../auth/signup.html" id="signup-link">Signup</a>
+      <a href="../products/products.html">Products</a>
+      <a href="../cart/cart.html">Cart</a>
+      <a href="../orders/orders.html" id="orders-link" style="display: none;">Orders</a>
+      <a href="../admin/admin.html" id="admin-link" style="display: none;">Admin</a>
+      <span id="welcome-msg" style="display: none; margin-left: 10px;"></span>
+      <button id="logout-btn" style="display: none;">Logout</button>
+    </nav>
+    <button id="theme-toggle">Toggle Theme</button>
+  </header>
+
+  <main>
+    <!-- Statistics -->
+    <section class="stats">
+      <h2>Statistics</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Total Sales</th>
+            <th>Total Products</th>
+            <th>Total Users</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="total-sales">0</td>
+            <td id="total-products">0</td>
+            <td id="total-users">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Users -->
+    <section class="manage-users">
+      <h2>Registered Users</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+          </tr>
+        </thead>
+        <tbody id="users-list"></tbody>
+      </table>
+    </section>
+
+    <!-- Products CRUD -->
+    <section class="manage-products">
+      <h2>Manage Products</h2>
+      <form id="productForm">
+        <input type="text" id="productTitle" placeholder="Product Title" required>
+        <input type="number" id="productPrice" placeholder="Price" step="0.01" required>
+        <input type="url" id="productImage" placeholder="Image URL" required>
+        <textarea id="productDescription" placeholder="Description"></textarea>
+        <button type="submit">Add Product</button>
+      </form>
+
+      <table border="1" id="productsTable">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Orders CRUD -->
+    <section class="manage-orders">
+      <h2>Manage Orders</h2>
+      <table border="1" id="ordersTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>User</th>
+            <th>Total</th>
+            <th>Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 My Store. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Us</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/utils.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

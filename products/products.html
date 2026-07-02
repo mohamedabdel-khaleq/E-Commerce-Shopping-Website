@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link rel="stylesheet" href="../assets/css/global.css">
+  <link rel="stylesheet" href="products.css">
+</head>
+<body>
+  <!-- Header with logo, navigation, and theme toggle -->
+  <header>
+    <h1>🛍️ My Store</h1>
+    <nav>
+      <a href="../index.html" id="home-link">Home</a>
+      <a href="../auth/login.html" id="login-link">Login</a>
+      <a href="../auth/signup.html" id="signup-link">Signup</a>
+      <a href="../products/products.html">Products</a>
+      <a href="../cart/cart.html">Cart</a>
+      <a href="../orders/orders.html" id="orders-link" style="display: none;">Orders</a>
+      <a href="../admin/admin.html" id="admin-link" style="display: none;">Admin</a>
+      <span id="welcome-msg" style="display: none; margin-left: 10px;"></span>
+      <button id="logout-btn" style="display: none;">Logout</button>
+    </nav>
+    <button id="themeToggle">🌙</button>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <h2>Products</h2>
+
+    <!-- search bar -->
+    <input type="text" id="searchInput" placeholder="Search products...">
+
+    <!-- filter section -->
+    <div id="filterSection">
+      <h3>Filter by:</h3>
+
+      <label for="categoryFilter">Category:</label>
+      <select id="categoryFilter">
+        <option value="all">All</option>
+        <option value="electronics">Electronics</option>
+        <option value="jewelery">Jewelery</option>
+        <option value="men's clothing">Men's Clothing</option>
+        <option value="women's clothing">Women's Clothing</option>
+      </select>
+
+      <label for="priceFilter">Price Range:</label>
+      <select id="priceFilter">
+        <option value="all">All</option>
+        <option value="0-50">$0 - $50</option>
+        <option value="51-100">$51 - $100</option>
+        <option value="101-200">$101 - $200</option>
+      </select>
+
+      <label for="sortSelect">Sort by Price:</label>
+      <select id="sortSelect">
+        <option value="default">Default</option>
+        <option value="low-to-high">Low to High</option>
+        <option value="high-to-low">High to Low</option>
+      </select>
+    </div>
+
+    <!-- container -->
+    <div id="productContainer"></div>
+
+    <!-- pagination -->
+    <div id="pagination"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 My Store. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Us</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+   <script src="../assets/js/utils.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="products.js"></script>
+</body>
+</html>
